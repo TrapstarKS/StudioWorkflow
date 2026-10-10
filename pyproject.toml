@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "studioworkflow"
+version = "1.0.0"
+description = "Search and edit Roblox Studio scripts locally with conflict-checked synchronization"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "TrapstarKS"}]
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: MacOS",
+  "Operating System :: Microsoft :: Windows",
+]
+
+[project.scripts]
+studioworkflow = "studioworkflow.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/TrapstarKS/StudioWorkflow"
+Issues = "https://github.com/TrapstarKS/StudioWorkflow/issues"
+
+[tool.setuptools.packages.find]
+include = ["studioworkflow*"]
+
+[tool.setuptools.package-data]
+studioworkflow = ["observer.luau", "skill/SKILL.md"]
